@@ -11,6 +11,7 @@ A simple and versatile counter application for tracking various quantities, even
 ## Technologies
 
 * React
+* Bootstrap
 
 ## Installation
 
