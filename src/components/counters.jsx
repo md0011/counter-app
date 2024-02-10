@@ -3,23 +3,24 @@ import Counter from './counter'
 
 export class Counters extends Component {
     state = {
-        countetrs: [
+        counters: [
             {id: 1, value: 3},
-            {id: 1, value: 0},
-            {id: 1, value: 0},
-            {id: 1, value: 0}
+            {id: 2, value: 0},
+            {id: 3, value: 0},
+            {id: 4, value: 0}
         ]
     }
   
-  handleDelete = () => {
-    console.log("Delete")
+  handleDelete = counterId => {
+    const counters = this.state.counters.filter(c => c.id !== counterId);
+    this.setState({ counters });
   }
-  
+
   render() {
     return (
       <div>
-        {this.state.countetrs.map(counter => 
-          <Counter key={counter.id} value={counter.value} onDelete={this.handleDelete} /> )}
+        {this.state.counters.map(counter => 
+          <Counter key={counter.id} counter={counter} onDelete={this.handleDelete} /> )}
       </div>
     )
   }
