@@ -5,12 +5,12 @@ const Navbar = ({ totalCounters }) => {
   return (
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <h1 class="navbar-brand">
           Navbar
           <span className="badge bg-pill bg-secondary mx-2">
             {totalCounters}
           </span>
-        </a>
+        </h1>
       </div>
     </nav>
   );

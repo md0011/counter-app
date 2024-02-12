@@ -9,15 +9,17 @@ export class Counters extends Component {
         <button onClick={onReset} className="btn btn-primary btn-lg">
           Reset
         </button>
-
-        {counters.map((counter) => (
-          <Counter
-            key={counter.id}
-            counter={counter}
-            onIncrement={onIncrement}
-            onDelete={onDelete}
-          />
-        ))}
+        <div>
+          {" "}
+          {counters.map((counter) => (
+            <Counter
+              key={counter.id}
+              counter={counter}
+              onIncrement={onIncrement}
+              onDelete={onDelete}
+            />
+          ))}
+        </div>
       </div>
     );
   }

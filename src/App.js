@@ -1,4 +1,3 @@
-import "./App.css";
 import React, { Component } from "react";
 import Navbar from "./components/navbar";
 import Counters from "./components/counters";
@@ -38,7 +37,7 @@ export class App extends Component {
     return (
       <React.Fragment>
         <Navbar totalCounters = {this.state.counters.filter(c => c.value > 0).length} />
-        <main className="container">
+        <main className="container d-flex flex-coloumn justify-content-center align-items-center">
           <Counters 
           counters = {this.state.counters}
           onReset = {this.handleReset}
